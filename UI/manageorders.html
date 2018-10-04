@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="stylesheets/manageorders.css" >
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+  <section class="upper-image-container">
+
+    <section class="section_container">
+      <div class="navigationDiv">
+        <a href="index.html"><img src="images/homeicon.png" alt="Home" id="home-link"/></a>
+        <a id="signin-link" class="left-links" href="signin.html">Sign Out</a>
+        <a id="signin-link" class="left-links" href="addnewitem.html">Add New Item</a>
+      </div>
+    </section>
+
+  </section>
+
+  <div class="separatorDiv">
+  </div>
+
+<section class="section-for-main-body" >
+
+     <!-- ORDER No.1 -->
+     <div class="div-for-order-title complete">
+       <div class="drop-down-arrow" id="arrow"></div>
+       <h4>ORDER R001 [Jorah Mormont]</h4>
+     </div>
+     <div class="div-for-table">
+       <table class="table-for-order-details">
+         <tr>
+           <th>Username</th>
+           <th>Food Item</th>
+           <th>Item ID</th>
+           <th>Quantity</th>
+           <th>Price</th>
+           <th>Calorie Level</th>
+           <th>Date of Delivery</th>
+         </tr>
+         <tr>
+           <td>Jorah Mormont</td>
+           <td>Pancake Vanilla</td>
+           <td>F001</td>
+           <td>3</td>
+           <td>N2000</td>
+           <td>7</td>
+           <td>02-09-2018</td>
+         </tr>
+         <tr>
+           <td class="cell-for-edit" colspan="7">
+             <form class="form-for-status">
+               <h3>Status</h3>
+               <span>Complete</span><input type="radio" name="status" value="complete" checked="checked" class="status-input-radiobtn">
+               <span>Pending</span><input type="radio" name="status" value="pending" class="status-input-radiobtn">
+               <span>Decline</span><input type="radio" name="status" value="decline" class="status-input-radiobtn">
+
+               <input type="submit" value="Save" class="submit">
+             </form>
+           </td>
+         </tr>
+       </table>
+     </div><!--END div-for-table -->
+      <!-- END OF ORDER No.1 -->
+
+       <!-- ORDER No. 2 -->
+     <div class="div-for-order-title pending">
+       <div class="drop-down-arrow" id="arrow"></div>
+       <h4>ORDER R001 [Samuel Tally]</h4>
+     </div>
+     <div class="div-for-table">
+       <table class="table-for-order-details">
+         <tr>
+           <th>Username</th>
+           <th>Food Item</th>
+           <th>Item ID</th>
+           <th>Quantity</th>
+           <th>Price</th>
+           <th>Calorie Level</th>
+           <th>Date of Delivery</th>
+         </tr>
+         <tr>
+           <td>John Snow</td>
+           <td>Pancake Vanilla</td>
+           <td>F001</td>
+           <td>3</td>
+           <td>N2000</td>
+           <td>7</td>
+           <td>02-09-2018</td>
+         </tr>
+         <tr>
+           <td class="cell-for-edit" colspan="7">
+             <form class="form-for-status">
+               <h3>Status</h3>
+               <span>Complete</span><input type="radio" name="status" value="complete" class="status-input-radiobtn">
+               <span>Pending</span><input type="radio" name="status" value="pending" checked="checked" class="status-input-radiobtn">
+               <span>Decline</span><input type="radio" name="status" value="decline" class="status-input-radiobtn">
+
+               <input type="submit" value="Save" class="submit">
+             </form>
+           </td>
+         </tr>
+       </table>
+     </div><!--END div-for-table -->
+     <!-- END OF ORDER No.2 -->
+
+     <!-- ORDER No.3 -->
+     <div class="div-for-order-title decline">
+         <div class="drop-down-arrow" id="arrow"></div>
+       <h4 class="order-title">ORDER R001 [Theon Greyjoy]</h4>
+     </div>
+     <div class="div-for-table">
+       <table class="table-for-order-details">
+         <tr>
+           <th>Username</th>
+           <th>Food Item</th>
+           <th>Item ID</th>
+           <th>Quantity</th>
+           <th>Price</th>
+           <th>Calorie Level</th>
+           <th>Date of Delivery</th>
+         </tr>
+         <tr>
+           <td>Theon Greyjoy</td>
+           <td>Pancake Vanilla</td>
+           <td>F001</td>
+           <td>3</td>
+           <td>N2000</td>
+           <td>7</td>
+           <td>02-09-2018</td>
+         </tr>
+         <tr>
+           <td class="cell-for-edit" colspan="7">
+             <form class="form-for-status">
+               <h3>Status</h3>
+               <span>Complete</span><input type="radio" name="status" value="complete" class="status-input-radiobtn">
+               <span>Pending</span><input type="radio" name="status" value="pending" class="status-input-radiobtn">
+               <span>Decline</span><input type="radio" name="status" value="decline" checked="checked" class="status-input-radiobtn">
+               <input type="submit" value="Save" class="submit">
+             </form>
+           </td>
+         </tr>
+       </table>
+     </div><!--END div-for-table -->
+     <!-- END OF ORDER No.1 -->
+
+  </section><!--END section-for-main-body -->
+
+<script>
+    $(document).on('click','.drop-down-arrow', function(){
+            $(this.parentNode).next().slideToggle();
+            // console.log(this);
+            // console.log(this.parentNode);
+            // console.log(this.parentNode.nextElementSibling);
+            // console.log(a);
+            // let a = $(this.parentNode).next()[0];
+            // let arrow = document.getElementById('arrow');
+            // console.log(arrow);
+    });
+
+    // console.log(a);
+
+    let radioBtns = document.querySelectorAll('.status-input-radiobtn');
+    // console.log(b);
+
+    for(let i = 0; i < radioBtns.length; i++) {
+      radioBtns[i].addEventListener('click', function(){
+        // console.log(this);
+        // console.log(this.value);
+        let form = this.parentNode;
+        // console.log(form);
+        let cell = form.parentNode;
+        // console.log(cell);
+        let table = cell.parentNode.parentNode.parentNode;
+        let divForTable = table.parentNode;
+        // console.log(divForTable);
+        let divForTitle = divForTable.previousElementSibling;
+        // console.log(divForTitle);
+
+        if(this.value === 'complete') {
+          divForTitle.classList.remove('pending');
+          divForTitle.classList.remove('decline');
+          divForTitle.classList.add('complete');
+        } else if(this.value === 'pending'){
+          divForTitle.classList.remove('complete');
+          divForTitle.classList.remove('decline');
+          divForTitle.classList.add('pending');
+        } else {
+          divForTitle.classList.remove('complete');
+          divForTitle.classList.remove('pending');
+          divForTitle.classList.add('decline');
+        }
+
+
+      });//end eventListener
+    }//end for
+</script>
+
+</body>
+</html>

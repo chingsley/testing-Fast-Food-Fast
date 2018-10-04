@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>fast-food-fast/homepage</title>
+        <!-- <style rel="stylesheet" href="/style.css" ></style> -->
+    </head>
+    <style>
+        body {
+            padding: 50px;
+            font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+        }
+        
+        a {
+            color: #00B7FF;
+        }
+        
+        .title {
+            background-color: lightblue;
+        }
+
+        #index_table {
+            width: 100%;
+            margin: auto;
+            /* border-collapse: collapse; */
+        }
+
+        #index_table th, #index_table td {
+            text-align: center;
+            padding: 8px;
+        }
+
+        #index_table tr {
+            border: 1px solid lightblue;
+        }
+
+        #index_table th {
+            background-color: lightblue;
+        }
+        tr:nth-child(even) {
+            background-color: #F8F9F9;
+        }
+    </style>
+    <body>
+        <header id="header">
+            <h1 class='title'>Welcome to fast-food-fast api.</h1>
+        </header>
+        <div>
+            <table id='index_table'>
+                <caption><h3>OUR RESOURCES</h3></caption>
+                <tr>
+                    <th>url</th>
+                    <th>resource (in json format)</th>
+                </tr>
+                <tr>
+                    <td>GET /api/v1/orders</td>
+                    <td>fetches all the orders</td>
+                </tr>
+                <tr>
+                    <td>GET /api/v1/orders/[orderID]</td>
+                    <td>fetches a particular order of orderID</td>
+                </tr>
+                <tr>
+                    <td>POST /api/v1/orders</td>
+                    <td>to add a new order</td>
+                </tr>
+                <tr>
+                    <td>PUT /api/v1/orders/[orderID]</td>
+                    <td>updates the status of a particular order of orderID</td>
+                </tr>
+                <tr>
+                    <td>DELETE /api/v1/orders/[orderID]</td>
+                    <td>deletes the status of a particular order of orderID</td>
+                </tr>
+                <tr>
+                    <td>GET /api/v1/items</td>
+                    <td>fetches all the items</td>
+                </tr>
+                <tr>
+                    <td>GET /api/v1/items/[itemID]</td>
+                    <td>fetches a particular item of itemID</td>
+                </tr>
+                <tr>
+                    <td>POST /api/v1/items</td>
+                    <td>to add a new item</td>
+                </tr>
+                <tr>
+                    <td>PUT /api/v1/items/[itemID]</td>
+                    <td>updates the status of a particular item of itemID</td>
+                </tr>
+                <tr>
+                    <td>DELETE /api/v1/items/[itemID]</td>
+                    <td>deletes the status of a particular item of itemID</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "name": "fast-food-fast",
+  "version": "1.0.0",
+  "description": "A Node.js RESTful API Tutorial Project (Build a simple shop API)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha --recursive",
+    "lint-test": "./node_modules/.bin/eslint *.js",
+    "lint": "eslint *.js --fix"
+  },
+  "keywords": [
+    "node",
+    "restful",
+    "api"
+  ],
+  "author": "Eneja Kingsley",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-routes-versioning": "^1.0.1",
+    "jsonwebtoken": "^8.3.0",
+    "pg": "^7.4.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-p5js": "^1.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "mocha": "^5.2.0"
+  }
+}
